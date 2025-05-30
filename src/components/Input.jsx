@@ -1,6 +1,7 @@
 import { useId } from "react";
 
 function Input(
+    label,
     type,
     placeholder,
     className,
@@ -9,7 +10,10 @@ function Input(
 ) {
     const id = useId();
     return (
-        <input type={`${type}`} placeholder={`${placeholder}`} className={`m-1 py-1 px-4 rounded-xl ${className}`} ref={ref} id={id} {...props}/>
+        <>
+            {label && (<label className="m-1 px-4 py-1">{label}</label>)}
+            <input type={`${type}`} placeholder={`${placeholder}`} className={`m-1 py-1 px-4 rounded-xl ${className}`} ref={ref} id={id} {...props}/>
+        </>
     )
 }
 
