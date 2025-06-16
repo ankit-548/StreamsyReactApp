@@ -1,5 +1,9 @@
 import { Input, Button } from './index.js'
 import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { registerUser } from '../api/auth.api.js';
+import { login as loginState } from '../store/authSlice.js';
+import { useNavigate } from 'react-router-dom';
 
 function Register() {
     const {
@@ -8,9 +12,28 @@ function Register() {
         formState: {errors}
     } = useForm();
     console.log(errors)
+    
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    async function register(data) {
+        try {
+            if(data) {
+                console.log("User Data to register", data)
+                const userData = await registerUser(data)
+                if(userData) {
+                    console.log(userData)
+                    dispatch(loginState(userData))
+                    navigate('/')
+                }
+            }
+        } catch (error) {
+            console.log("Error:couldn't register", error.message)
+        }
+    }
     return (
         <>
-            <form onSubmit={handleSubmit(data)}>
+            <form onSubmit={handleSubmit(register)}>
                 <Input label="UserName" type="text" placeholder="username" className="" {...register('userName', {required: true})}/>
                 {errors.userName && <p>userName is required</p>}
                 <Input label="Email" type="email" placeholder="email" className="" {...register('email', {required: true})}/>
