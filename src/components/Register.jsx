@@ -32,7 +32,7 @@ function Register() {
         }
     }
     return (
-        <>
+        <div className='w-1/3 h-50 rounded-xl bg-white'>
             <form onSubmit={handleSubmit(register)}>
                 <Input label="UserName" type="text" placeholder="username" className="" {...register('userName', {required: true})}/>
                 {errors.userName && <p>userName is required</p>}
@@ -48,7 +48,7 @@ function Register() {
                 {errors.avatar && <p>avatar is required</p>}
                 <Button type="submit">SignUp</Button>
             </form>
-        </>
+        </div>
     )
 }
 

@@ -23,7 +23,7 @@ function Login() {
         }
     }
     return (
-        <div>
+        <div className="w-1/3 h-50 rounded-xl bg-gray-50">
             <form onSubmit={handleSubmit(handleLogin)}>
                 <Input label="Email" type="email" placeholder="Enter user email" {...register('email', {required:true})}/>
                 {errors.email && <p>email field is required</p>}

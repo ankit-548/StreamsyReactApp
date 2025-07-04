@@ -9,18 +9,18 @@ function Header() {
         {
             name: 'SignIn',
             slug: '/login',
-            isActive: isUserLoggedIn,
+            isActive: !isUserLoggedIn,
         }
     ]
 
     return (
-        <>
+        <div className='w-full h-1/12 position-fixed bg-white'>
             <ul>
                 <li>
                     <Logo></Logo>
                 </li>
                 <li>                    
-                    <Input placeholder="Search" className="rounded-4xl w-25"/>
+                    <Input placeholder="Search" className="rounded-4xl w-25 bg-gray-50"/>
                 </li>
                 {
                     navBar.map(item => {
@@ -28,7 +28,7 @@ function Header() {
                     })
                 }                
             </ul>
-        </>
+        </div>
     )
 }
 
