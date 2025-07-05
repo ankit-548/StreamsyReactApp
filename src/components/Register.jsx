@@ -16,7 +16,7 @@ function Register() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    async function register(data) {
+    async function registeruser(data) {
         try {
             if(data) {
                 console.log("User Data to register", data)
@@ -33,7 +33,7 @@ function Register() {
     }
     return (
         <div className='w-1/3 h-50 rounded-xl bg-white'>
-            <form onSubmit={handleSubmit(register)}>
+            <form onSubmit={handleSubmit(registeruser)}>
                 <Input label="UserName" type="text" placeholder="username" className="" {...register('userName', {required: true})}/>
                 {errors.userName && <p>userName is required</p>}
                 <Input label="Email" type="email" placeholder="email" className="" {...register('email', {required: true})}/>

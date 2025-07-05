@@ -1,3 +1,4 @@
+import React from 'react'
 import { Header as HeaderComponent } from '../components/index.js'
 
 export default function Home() {

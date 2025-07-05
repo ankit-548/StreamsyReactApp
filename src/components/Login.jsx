@@ -24,6 +24,8 @@ function Login() {
     }
     return (
         <div className="w-1/3 h-50 rounded-xl bg-gray-50">
+            <span>Don't have an account? Signup</span>
+            <Link to="/register">Signup</Link>
             <form onSubmit={handleSubmit(handleLogin)}>
                 <Input label="Email" type="email" placeholder="Enter user email" {...register('email', {required:true})}/>
                 {errors.email && <p>email field is required</p>}

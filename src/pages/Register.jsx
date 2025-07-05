@@ -1,3 +1,4 @@
+import React from 'react'
 import { Register as RegisterComponent } from '../components/index.js'
 
 export default function Register() {

@@ -6,7 +6,6 @@ import Container from "./container/Container.jsx";
 import Logout from "./Logout.jsx"
 import Logo from "./Logo.jsx"
 import Header from "./header/header.jsx";
-import Home from "./Home.jsx";
 
 export {
     Button,
@@ -17,5 +16,4 @@ export {
     Logout,
     Logo,
     Header,
-    Home
 }

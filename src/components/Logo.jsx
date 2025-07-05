@@ -1,3 +1,4 @@
+import React from 'react'
 import logo from '../assets/streamsyLogo.png'
 import { Link } from 'react-router-dom'
 
@@ -11,3 +12,5 @@ function Logo(
         </div>
     )
 }
+
+export default Logo
