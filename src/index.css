@@ -66,3 +66,13 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+
+.yanone-kaffeesatz-font {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: x-large;
+}
+
