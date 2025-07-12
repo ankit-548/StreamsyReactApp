@@ -8,7 +8,7 @@ function Button({
     ...props
 }) {
     const id = useId();
-    return (<button className={`m-1 px-4 py-1 rounded-xl bg-primary ${className}`} ref={ref} id={id} {...props}>{children}</button>)
+    return (<button type="submit" className={`m-1 px-4 py-1 rounded-xl bg-blue-500 ${className}`} ref={ref} id={id} {...props}>{children}</button>)
 }
 
 export default React.forwardRef(Button);
