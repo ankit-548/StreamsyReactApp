@@ -14,7 +14,9 @@ function Login() {
     async function handleLogin(data) {
         try {
             if(data) {
+                console.log('data', data)
                 const userData = await loginUser(data)
+                console.log('userData', userData)
                 if(userData) {
                     dispatch(loginReducer(userData))
                     navigate('/')
