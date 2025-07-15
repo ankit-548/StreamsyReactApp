@@ -10,7 +10,9 @@ function Logout() {
 
     async function logoutHandler(e) {
         try {
+            console.log('logouthandler called')
             const status = await logoutUser()
+            console.log('logouthandler called status', status)
             if(status) {
                 dispatch(logoutReducer())
                 navigate('/')

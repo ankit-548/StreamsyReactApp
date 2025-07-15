@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { Logo, Input } from '../index.js'
+import { Logo, Input, Logout } from '../index.js'
 import { useSelector } from 'react-redux';
 
 function Header() {
@@ -11,7 +11,7 @@ function Header() {
             name: 'SignIn',
             slug: '/login',
             isActive: !isUserLoggedIn,
-        }
+        },
     ]
 
     return (
@@ -29,6 +29,7 @@ function Header() {
                             return item.isActive && <li><Link className='rounded-xl px-4 py-2 bg-red-500 text-white hover:border-black hover:border-2 hover:bg-white hover:text-black' to={`${item.slug}`}>{item.name}</Link></li>
                         })
                     }
+                    {isUserLoggedIn && (<li><Logout/></li>)}
                 </div>
             </ul>
         </div>
