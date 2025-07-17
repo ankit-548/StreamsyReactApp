@@ -27,15 +27,17 @@ function Login() {
         }
     }
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-red-500 via-yellow-400 via-green-400 via-blue-500 via-indigo-500 to-pink-500 backdrop-blur-3xl">
-            <div className="w-1/3 h-50 rounded-xl bg-gray-50">
-                <span>Don't have an account? </span>
-                <Link to="/register">signup</Link>
-                <form onSubmit={handleSubmit(handleLogin)}>
+        <div className="flex w-full h-svh items-center justify-center  bg-[url(./assets/blurred-colorful-background.jpg)] bg-cover bg-center">
+            <div className="flex flex-col items-center justify-center w-1/4 h-1/2 rounded-xl bg-gray-50">
+                <div>
+                    <span>Don't have an account? </span>
+                    <Link to="/register" className="text-blue-500">signup</Link>
+                </div>
+                <form className="flex flex-col" onSubmit={handleSubmit(handleLogin)}>
                     <Input label="Email" type="email" placeholder="Enter user email" {...register('email', {required:true})}/>
-                    {errors.email && <p>email field is required</p>}
+                    {errors.email && <p className="text-red-400">email field is required</p>}
                     <Input label="Password" type="password" placeholder="Enter user password" {...register('password', {required: true})}/>
-                    {errors.password && <p>please enter correct password</p>}
+                    {errors.password && <p className="text-red-400">please enter correct password</p>}
                     <Button children="Submit"/> 
                 </form>
             </div>

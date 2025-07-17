@@ -12,7 +12,7 @@ function Input({
     console.log('label',label)
     return (
         <>
-            {label && (<label className="m-1 px-4 py-1">{`${label}`}</label>)}
+            {label && (<div><label className="m-1 px-4 py-1">{`${label}`}</label></div>)}
             <input type={`${type}`} placeholder={`${placeholder}`} className={`m-1 py-1 px-4 rounded-xl bg-gray-200 ${className}`} ref={ref} id={id} {...props}/>
         </>
     )
