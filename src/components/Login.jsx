@@ -28,12 +28,12 @@ function Login() {
     }
     return (
         <div className="flex w-full h-svh items-center justify-center  bg-[url(./assets/blurred-colorful-background.jpg)] bg-cover bg-center">
-            <div className="flex flex-col items-center justify-center w-1/4 h-1/2 rounded-xl bg-gray-50">
-                <div>
-                    <span>Don't have an account? </span>
-                    <Link to="/register" className="text-blue-500">signup</Link>
-                </div>
+            <div className="flex flex-col items-center justify-center p-4 w-auto h-1/2 rounded-xl bg-white">
                 <form className="flex flex-col" onSubmit={handleSubmit(handleLogin)}>
+                    <div className="w-full mx-4">
+                        <span>Don't have an account? </span>
+                        <Link to="/register" className="text-blue-500">signup</Link>
+                    </div>
                     <Input label="Email" type="email" placeholder="Enter user email" {...register('email', {required:true})}/>
                     {errors.email && <p className="text-red-400">email field is required</p>}
                     <Input label="Password" type="password" placeholder="Enter user password" {...register('password', {required: true})}/>
