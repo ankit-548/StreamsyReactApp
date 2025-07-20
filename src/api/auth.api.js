@@ -1,6 +1,6 @@
 import axiosInstance from './axiosConfig/axiosInstance.js'
 
-async function registerUser(formData) {
+async function registerUser(formData) {    
     return await axiosInstance.post('/user/register', formData)
 }
 
