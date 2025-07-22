@@ -6,6 +6,7 @@ import {login as loginReducer} from '../store/authSlice.js'
 import { useNavigate } from "react-router-dom"
 import { Link } from "react-router-dom"
 import Button from "./Button.jsx"
+import homeIcon from '../assets/icons/home.svg'
 
 function Login() {
     const {register, handleSubmit, formState: {errors}} = useForm()
@@ -40,7 +41,7 @@ function Login() {
                         <span>Don't have an account? </span>
                         <Link to="/register" className="text-blue-500">signup</Link>
                     </div>
-                    <Link className="flex justify-center" to='/'><span class="material-symbols-outlined">home</span></Link>
+                    <Link className="flex justify-center" to='/'><img src={homeIcon} className="h-10 w-10"></img></Link>
                 </form>
             </div>
         </div>

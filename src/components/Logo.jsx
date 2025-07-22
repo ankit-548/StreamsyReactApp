@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/streamsyLogo.png'
+import logo from '../assets/streamsy_logo.png'
 import { Link } from 'react-router-dom'
 
 function Logo(

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20 20" id="laptop">
+  <defs>
+    <linearGradient id="a">
+      <stop offset="0" stop-color="#000092"></stop>
+      <stop offset="1" stop-color="#ff00f3"></stop>
+    </linearGradient>
+    <linearGradient xlink:href="#a" id="b" x1="3" x2="14.977" y1="9.5" y2="9.5" gradientUnits="userSpaceOnUse"></linearGradient>
+  </defs>
+  <path fill="url(#b)" d="M4.5 3c-.411 0-.802.146-1.078.422A1.516 1.516 0 0 0 3 4.5v7c0 .411.146.802.422 1.078S4.089 13 4.5 13H8v2H6.5a.5.5 0 1 0 0 1h7a.5.5 0 1 0 0-1H12v-2h3.5c.411 0 .802-.146 1.078-.422S17 11.911 17 11.5v-7c0-.411-.146-.802-.422-1.078A1.516 1.516 0 0 0 15.5 3h-11zm0 1h11c.189 0 .297.055.371.129.074.074.129.182.129.371V10H4V4.5c0-.189.055-.297.129-.371C4.203 4.055 4.31 4 4.5 4zM4 11h12v.5c0 .189-.055.297-.129.371-.074.074-.182.129-.371.129h-11c-.189 0-.297-.055-.371-.129C4.055 11.797 4 11.69 4 11.5V11zm5 2h2v2H9v-2z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible" style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal"></path>
+</svg>

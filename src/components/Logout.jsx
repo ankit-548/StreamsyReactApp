@@ -24,7 +24,7 @@ function Logout() {
 
     return (
         <>
-        <Button onClick={logoutHandler} className="bg-red-500">Logout</Button>
+        <Button onClick={logoutHandler} className="rounded-xl px-4 py-1 bg-blue-500 text-white hover:border-black hover:border-2 hover:bg-white hover:text-black">Logout</Button>
         </>
     )
 }
