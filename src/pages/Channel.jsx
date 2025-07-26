@@ -1,7 +1,6 @@
-import React from 'react'
-import { Header as HeaderComponent, Sidebar as SidebarComponent } from '../components/index.js'
+import { Header as HeaderComponent,Sidebar as SidebarComponent, Channel as ChannelComponent  } from "../components/index.js"
 
-export default function Home() {
+function Channel() {
     return (
         <div className='w-full h-full'>
             <div className='w-full'>
@@ -12,8 +11,11 @@ export default function Home() {
                     <SidebarComponent/>
                 </div>
                 <div className='w-full h-full'>
+                    <ChannelComponent/>
                 </div>                
             </div>
         </div>
     )
 }
+
+export default Channel;

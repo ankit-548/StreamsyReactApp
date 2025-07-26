@@ -5,7 +5,7 @@ import './index.css'
 import App from './App.jsx'
 import { store } from './store/store.js'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { Home, Login, Register } from './pages/index.js'
+import { Home, Login, Register, Channel } from './pages/index.js'
 import {Logout} from './components/index.js'
 
 const router = createBrowserRouter([
@@ -28,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: '/logout',
         Component: Logout
+      },
+      {
+        path: '/channel',
+        Component: Channel
       }
     ]
   }

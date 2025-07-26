@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import homeIcon from '../assets/icons/home.svg'
 import channelIcon from '../assets/icons/laptop.svg'
 import profileIcon from '../assets/icons/smile.svg'
+import historyIcon from '../assets/icons/history.png'
 function Sidebar() {
     const navBar = [
         {
@@ -19,6 +20,11 @@ function Sidebar() {
             slug: '/profile',
             icon: profileIcon,
         },
+        {
+            name: 'History',
+            slug: '/watchHistory',
+            icon: historyIcon
+        }
     ]
 
     return (

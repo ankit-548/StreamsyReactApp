@@ -7,6 +7,7 @@ import Logout from "./Logout.jsx"
 import Logo from "./Logo.jsx"
 import Header from "./header/header.jsx";
 import Sidebar from "./sidebar.jsx";
+import Channel from "./Channel.jsx";
 
 export {
     Button,
@@ -18,4 +19,5 @@ export {
     Logo,
     Header,
     Sidebar,
+    Channel
 }
