@@ -15,7 +15,7 @@ function Header() {
     ]
 
     return (
-        <div className='position-fixed w-full bg-white m-1 px-4 py-2'>
+        <div className='w-full bg-white m-1 px-4 py-2'>
             <ul className='flex'>
                 <li className='w-14 flex-none'>
                     <Logo></Logo>
