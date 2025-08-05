@@ -8,6 +8,7 @@ import Logo from "./Logo.jsx"
 import Header from "./header/header.jsx";
 import Sidebar from "./sidebar.jsx";
 import Channel from "./Channel.jsx";
+import VideoUpload from './VideoUpload.jsx'
 
 export {
     Button,
@@ -19,5 +20,6 @@ export {
     Logo,
     Header,
     Sidebar,
-    Channel
+    Channel,
+    VideoUpload
 }
