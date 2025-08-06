@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { Input } from './index.js'
+import { Input, Button } from './index.js'
 import {uploadVideo} from '../api/video.api.js'
+import { redirect } from 'react-router-dom';
 
 function VideoUpload() {
     const [formData, setFormData] = useState({
@@ -11,7 +12,7 @@ function VideoUpload() {
         isPublished: false,
     });
 
-    const [errors, setErrors] = useState();
+    const [errors, setErrors] = useState({});
 
     function changeHandler(e) {
         const {name, type, value, files, checked} = e.target;
@@ -37,7 +38,8 @@ function VideoUpload() {
         if(validateForm) {
             console.log(formData)
             response = await uploadVideo(formData)
-            console.log(response)            
+            console.log(response) 
+            redirect('/channel')           
         }
     }
 
@@ -47,16 +49,18 @@ function VideoUpload() {
         <div className="flex w-full h-svh items-center justify-center  bg-[url(./assets/white-blurreed-bg.jpg)] bg-cover bg-center">
             <div className="flex flex-col items-center justify-center p-4 w-auto h-auto rounded-xl bg-white">
                 <form className='flex flex-col' onSubmit={handleSubmit}>
-                    <Input accept='video/*' onChange={changeHandler} name='videoFile' value={formData.videoFile} type='file' className='w-full h-5 bg-purple-300' />
+                    <Input accept='video/*' onChange={changeHandler} name='videoFile' label='Video' value={formData.videoFile} type='file' className='w-full h-20 bg-purple-300' />
                     {errors.videoFile && <p>{errors.videoFile}</p> }
-                    <Input accept='video/*' onChange={changeHandler} name='thumbnail' value={formData.thumbnail} type='file' className='bg-purple-300' />
+                    <Input accept='video/*' onChange={changeHandler} name='thumbnail' label='Thumbnail' value={formData.thumbnail} type='file' className='bg-purple-300' />
                     {errors.videoFile && <p>{errors.thumbnail}</p> }
-                    <Input accept='video/*' onChange={changeHandler} name='title' value={formData.videoFile} type='text' />
+                    <Input onChange={changeHandler} name='title' label='Title' placeholder='Title' value={formData.videoFile} type='text' />
                     {errors.videoFile && <p>{errors.title}</p> }
-                    <Input accept='video/*' onChange={changeHandler} name='description' value={formData.description} type='text' />
+                    <Input onChange={changeHandler} name='description' label='Description' placeholder='Description' value={formData.description} type='text' />
                     {errors.videoFile && <p>{errors.description}</p> }
-                    <Input accept='video/*' onChange={changeHandler} name='isPublished' checked={formData.isPublished} type='checkbox' />
+                    <span className='mx-5'>IsPublished</span>
+                    <input onChange={changeHandler} name='isPublished' checked={formData.isPublished} type='checkbox' />
                     {errors.videoFile && <p>{errors.isPublished}</p> }
+                    <Button children="Submit"/>
                 </form>
             </div>
         </div>
